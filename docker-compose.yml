@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  load_balancer:
+    build: 
+      context: .
+      dockerfile: LoadBalancer.dockerfile
+    ports:
+      - "80:80"
+
+  database:
+    image: "mysql:5.7"
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./env/database.env
+      
+
+  
+  wordpress:
+    depends_on:
+      - "load_balancer"
+      - "database"
+    image: wordpress
+    links:
+      - "database:db"
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./env/wordpress.env
+    
+      
