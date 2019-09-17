@@ -2,6 +2,10 @@ version: "3"
 
 services:
   load_balancer:
+    depends_on:
+      - "wordpress1"
+      - "wordpress2"
+      - "wordpress3"
     build: 
       context: .
       dockerfile: LoadBalancer.dockerfile
@@ -12,21 +16,44 @@ services:
     image: "mysql:5.7"
     ports:
       - "3306:3306"
+    volumes:
+      - /var/www/html:/var/www/html
     env_file:
       - ./env/database.env
       
 
   
-  wordpress:
+  wordpress1:
     depends_on:
-      - "load_balancer"
       - "database"
     image: wordpress
-    links:
-      - "database:db"
+    volumes:
+      - /var/www/html:/var/www/html
     ports:
       - "8080:8080"
     env_file:
       - ./env/wordpress.env
-    
       
+  wordpress2:
+    depends_on:
+      - "database"
+    image: wordpress
+    volumes:
+      - /var/www/html:/var/www/html
+    ports:
+      - "8081:8080"
+    env_file:
+      - ./env/wordpress.env
+
+  wordpress3:
+    depends_on:
+      - "database"
+    image: wordpress
+    volumes:
+      - /var/www/html:/var/www/html
+    ports:
+      - "8082:8080"
+    env_file:
+      - ./env/wordpress.env      
+  
+ 
