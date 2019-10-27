@@ -12,7 +12,8 @@
     define('WP_SITEURL','http://ip of the server');
 </code>
 
-\
+<br/>
+
 > wp-config.php can be found in /var/www/html
 
 <p>To test using locust, run the following code</p>
@@ -26,7 +27,8 @@
     grubykarol/locust
 </code>
 
-\
+<br/>
+
 > make sure not to use "localhost" or "0.0.0.0" as the server ip, use the machines actual ip 
 
 <p> When everything is running you can access locust through localhost:8089 and access wordpress through "machines ip", "localhost" or "0.0.0.0"</p>
