@@ -8,11 +8,11 @@
     If theres any errors with static files (.js, .css) make sure that the wp-config.php file has these lines inside
 </p>
 <code>
-    define('WP_HOME','http://ip of the server');
+    define('WP_HOME','http://ip of the server');  
     define('WP_SITEURL','http://ip of the server');
 </code>
 
-<br/>
+  
 
 > wp-config.php can be found in /var/www/html
 
@@ -27,7 +27,7 @@
     grubykarol/locust
 </code>
 
-<br/>
+  
 
 > make sure not to use "localhost" or "0.0.0.0" as the server ip, use the machines actual ip 
 
