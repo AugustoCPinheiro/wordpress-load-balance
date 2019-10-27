@@ -12,6 +12,7 @@
     define('WP_SITEURL','http://ip of the server');
 </code>
 
+
 > wp-config.php can be found in /var/www/html
 
 <p>To test using locust, run the following code</p>
@@ -24,6 +25,7 @@
     -p 8089:8089
     grubykarol/locust
 </code>
+
 
 > make sure not to use "localhost" or "0.0.0.0" as the server ip, use the machines actual ip 
 
