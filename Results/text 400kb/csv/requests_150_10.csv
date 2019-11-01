@@ -1,0 +1,3 @@
+"Method","Name","# requests","# failures","Median response time","Average response time","Min response time","Max response time","Average Content Size","Requests/s"
+"GET","/2019/10/31/texto-400kb",12658,0,2900,2979,176,8291,118011,37.11
+"None","Total",12658,0,2900,2979,176,8291,118011,37.11
