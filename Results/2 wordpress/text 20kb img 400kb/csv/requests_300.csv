@@ -1,0 +1,3 @@
+"Method","Name","# requests","# failures","Median response time","Average response time","Min response time","Max response time","Average Content Size","Requests/s"
+"GET","/2019/10/31/20kb-e-imagem",17954,11226,1200,2759,7,12543,14133,74.02
+"None","Total",17954,11226,1200,2759,7,12543,14133,74.02
